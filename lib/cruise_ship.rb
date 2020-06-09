@@ -4,15 +4,15 @@
 # suite_c: "Alfred Tennyson",
 # suite_d: "Charlie Chaplin",
 # suite_e: "Crumpet the Elf"
-# }
+}
 
 def select_winner(passengers)
-  # add the code snippet here!
-  winner = ""
-  passengers.each do |key, value|
-    if key === :suite_a && value.start_with?("A") || value.start_with?("a")
-        winner += value
-    end
+winner = ""
+passengers.each do |suite, name|
+  if suite == :suite_a &&
+    name.start_with?("A")
+    winner = name
   end
-  winner
 end
+
+winner
